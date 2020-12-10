@@ -177,7 +177,9 @@ nav .fa-shopping-cart{
     outline: none;
     padding: 2px;
     border-radius: 5px;
-    
+    width: 16px;
+    height: 12px;
+    margin-top: 4.5px;
     color: #fff;
     background: rgb(86, 86, 86);
     
