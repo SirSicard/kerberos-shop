@@ -176,3 +176,17 @@ nav .fa-shopping-cart{
     height: 82vh;
 }
 
+footer{
+    width: 80%;
+    background-color: #fdfdfd;
+    margin: auto;    
+}
+.footer-con{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+.footer-con p{
+    font-size: 15px;
+}
