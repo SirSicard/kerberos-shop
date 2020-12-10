@@ -51,6 +51,11 @@ nav h1 {
     font-weight: bold;
 }
 
+nav a:hover,
+i:hover{
+    color: rgb(147, 147, 147);
+}
+
 nav h1 a {
     text-decoration: none;
     color: #333;
@@ -134,7 +139,7 @@ nav .fa-shopping-cart{
 
 .search {
     height: 64px;
-    width: 80%;
+    width: 90%;
     transform: translateX(-50%);
     left: 50%;
     background-color: #fdfdfd;
