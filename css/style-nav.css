@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+
+
+}
+.container{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+}
+
+nav{
+    width: 80%;
+    height: 64px;
+    background-color: #fdfdfd;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+}
+
+nav h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    text-transform: uppercase;
+}
+
+nav h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav .home{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 300px;
+    /* margin-right: 200px; */
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+nav .about{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 210px;
+    /* margin-right: 120px; */
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+nav .shop{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 130px;
+    /* margin-right: 60px; */
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+nav .fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+}
+nav .fa-shopping-cart{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+}
+.hide-search{
+    opacity: .3;
+    margin-top: -64px;
+}
+
+
+.search {
+    height: 64px;
+    width: 80%;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: #fdfdfd;
+    position: relative;
+    z-index: 0;
+    transition: .4s;
+}
+
+.hide-cart{
+    
+    margin-top: -64px;
+    display: none;
+}
+
+.shopping-cart {
+    /* height: 64px; */
+    width: 30%;
+    transform: translateX(-50%);
+    left: 80%;
+    background-color: #fdfdfd;
+    position: absolute;
+    z-index: 2;
+    transition: .4s;
+    
+}
+
+.search input{
+    width: calc(100% - 180px);
+    padding: 10px 15px;
+    margin-right: 15px;
+    font-size: 1.3rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #333;
+    color: #333;
+}
+.search button{
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid  #333;;
+    color: #333;
+    transition: .4s;
+}
+
+.search input::placeholder{
+    color: #b4b4b4;
+}
+
+.search button:hover{
+    background-color: #fff;
+    color: #212121;
+}
+
+.hero{
+    background: url("../assets/img/landing-hero-0.1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 82vh;
+}
