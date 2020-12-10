@@ -40,12 +40,15 @@ nav h1 {
     transform: translateY(-50%);
     color: #333;
     text-transform: uppercase;
+    font-size: 32px;
 }
 
 nav h1 a {
     text-decoration: none;
     color: #333;
+    
 }
+
 
 nav .home{
     position: absolute;
@@ -55,7 +58,7 @@ nav .home{
     /* margin-right: 200px; */
     text-decoration: none;
     color: #333;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -67,7 +70,7 @@ nav .about{
     /* margin-right: 120px; */
     text-decoration: none;
     color: #333;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -79,7 +82,7 @@ nav .shop{
     /* margin-right: 60px; */
     text-decoration: none;
     color: #333;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -90,7 +93,7 @@ nav .fa-search{
     right: 50px;
     width: 30px;
     height: 30px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
 }
@@ -101,7 +104,7 @@ nav .fa-shopping-cart{
     right: 0;
     width: 30px;
     height: 30px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
 }
