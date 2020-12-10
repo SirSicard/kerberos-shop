@@ -139,9 +139,9 @@ nav .fa-shopping-cart{
     left: 89%;
     background-color: rgb(86, 86, 86, 0.7);
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     transition: .4s;
-    border-radius: 42px;
+    border-radius: 20px;
     border-block: 2px solid #333;
     
 }
