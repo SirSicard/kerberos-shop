@@ -16,7 +16,12 @@ body {
     position: sticky;
     top: 0;
     z-index: 3;
+    opacity: .2;
 } 
+
+.main-header:hover{
+    opacity: 0.8;
+}
 .container{
     position: relative;
     left: 50%;
@@ -26,7 +31,7 @@ body {
 }
 
 nav{
-    width: 80%;
+    width: 80.1%;
     height: 64px;
     background-color: #fdfdfd;
     position: relative;
@@ -41,6 +46,7 @@ nav h1 {
     color: #333;
     text-transform: uppercase;
     font-size: 32px;
+    cursor: pointer;
 }
 
 nav h1 a {
@@ -60,6 +66,7 @@ nav .home{
     color: #333;
     font-size: 14px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 nav .about{
@@ -72,6 +79,7 @@ nav .about{
     color: #333;
     font-size: 14px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 nav .shop{
@@ -84,6 +92,7 @@ nav .shop{
     color: #333;
     font-size: 14px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 nav .fa-search{
@@ -258,6 +267,8 @@ input[type="number"]{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 82vh;
+    height: 92vh;
+    position: relative;
+    top: -160px;
 }
 
