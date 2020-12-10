@@ -33,7 +33,7 @@ body {
 nav{
     width: 90.1%;
     height: 64px;
-    background-color: #fdfdfd;
+    background-color: #fff;
     position: relative;
     z-index: 1;
     margin: auto;
@@ -52,7 +52,7 @@ nav h1 {
 }
 
 nav a:hover,
-i:hover{
+nav i:hover{
     color: rgb(147, 147, 147);
 }
 
@@ -62,7 +62,6 @@ nav h1 a {
     
     
 }
-
 
 nav .home{
     position: absolute;
@@ -160,12 +159,12 @@ nav .fa-shopping-cart{
     width: 17%;
     transform: translateX(-50%);
     left: 89%;
-    background-color: rgb(86, 86, 86, 0.7);
+    background-color: rgb(86, 86, 86, 1);
     position: absolute;
     z-index: 3;
     transition: .4s;
-    border-radius: 20px;
-    border-block: 2px solid #333;
+     border-radius: 9px;
+    /* border-block: 2px solid #333;  */
     
 }
 
@@ -239,7 +238,7 @@ input[type="number"]{
     padding: 10px 15px;
     background-color: transparent;
     border: 2px solid  #fff;
-    border-radius: 14px;
+    
     color: #fff;
     transition: .4s;
     width: 89px;
@@ -265,15 +264,17 @@ input[type="number"]{
     border: 2px solid  #333;;
     color: #333;
     transition: .4s;
+    cursor: pointer;
 }
+
 
 .search input::placeholder{
     color: #b4b4b4;
 }
 
 .search button:hover{
-    background-color: #fff;
-    color: #212121;
+    background-color: #333;
+    color: #fff;
 }
 
 .hero{
@@ -284,7 +285,7 @@ input[type="number"]{
     height: 109vh;
     position: relative;
     top: -160px;
-    color: red;
+    
 }
 
 .text{
@@ -321,7 +322,8 @@ input[type="number"]{
     font-weight: bolder;
 }
 
-.text button:hover{
+.text button:hover,
+.cart-button:hover{
     background-color: #fff;
     color: #333;
 }
