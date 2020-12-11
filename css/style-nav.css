@@ -329,3 +329,26 @@ input[type="number"]{
     color: #333;
 }
 
+footer{
+    width: 80%;
+    background-color: #fdfdfd;
+    margin: auto;    
+}
+.footer-con{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.footer-con p{
+    font-size: 15px;
+}
+.lowerfot{
+    background-color: #9c9c9c;
+    margin: auto;   
+    justify-content: space-between;  
+}
+.lowerfot i{
+    justify-content: space-between; 
+}
