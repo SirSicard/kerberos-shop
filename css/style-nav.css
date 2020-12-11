@@ -329,3 +329,11 @@ input[type="number"]{
     color: #333;
 }
 
+article{
+    display: none;
+}
+
+#home{
+    display: block;
+}
+
