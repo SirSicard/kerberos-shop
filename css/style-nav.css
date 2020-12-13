@@ -210,7 +210,6 @@ nav .fa-shopping-cart{
 .hero{
     background: url("../assets/img/landing-hero-0.1.jpg");
     background-size: cover;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     height: 82vh;
