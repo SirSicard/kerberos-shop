@@ -32,23 +32,13 @@
         </div> 
 
         <div class="shopping-cart hide-cart">
-            <div class="shop-container">
+            <div class="shop-container" id="cart">
                 <h3>Shopping Cart</h3>
-
-                <ul class="cart-items">
-                    <li class="item">
-                        <span class="product-name">Item</span> 
-                        <span class="product-price">100 kr</span>
-                        <input class="cart-quantity-input"  type="number" value="1" min="1">
-                        <span class="remove-x" style="cursor:pointer;">X</span>
-                    </li>
-                        
-                </ul>
                 <ul>
-                  
-                  <li class="total">Total <span>0</span></li>
+                    <div class="list-items"></div>
+                    <li class="total">Total <span>0</span></li>
                 </ul>
-                <button class="cart-button">Check out</button>
+                <button><a href="#checkout">Chechout</a></button>
             </div>
 
         </div>
@@ -83,6 +73,27 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa consectetur labore doloremque commodi inventore debitis rerum soluta possimus id, dolorem optio delectus alias, velit hic, vel harum illo nobis totam.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum saepe deleniti ducimus consequuntur aspernatur velit eos nostrum adipisci optio. Enim commodi officiis magnam optio consequatur, voluptatum veritatis iusto dicta.</p>
         </div>
+
+        <!-- Adding this DIV for Testing the function odf the Shopping Cart -->
+        <h2>Adding this DIV for Testing the function of the Shopping Cart</h2>
+        <div class="product">
+            <div class="content">
+                <h2>SOVIET SLIM MENS JEANS</h2>
+                <ul>
+                    <li>Art.no:</li>
+                    <li>Size:</li>
+                    <li>Colour:</li>
+                    <li>Description:</li>
+                </ul>
+                <button onclick="getProductInfo(this)">
+                Buy Now <span>999</span> KR
+                </button>
+            </div>
+            <img
+                src="https://madefitclassique.com/wp-content/uploads/2018/11/64437318_l-510x510.jpg"
+            />
+        </div>
+
     </main>
     
     <footer>
@@ -121,7 +132,7 @@
             <i class="fab fa-twitter-square"></i>
         </div>
     </footer>
-    
+    <script src="../js/app-shoppingcart.js"></script>
     <script src="../js/app-nav.js"></script>
 </body>
 </html>
