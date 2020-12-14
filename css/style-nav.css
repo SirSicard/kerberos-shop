@@ -331,8 +331,9 @@ input[type="number"]{
 
 footer{
     width: 90.1%;
-    background-color: #fdfdfd;
+    background-color: #9c9c9c;
     margin: auto;    
+    color: rgb(230, 230, 230);
 }
 .footer-con{
     text-align: center;
@@ -348,6 +349,8 @@ footer{
     background-color: #9c9c9c;
     margin: auto;   
     justify-content: space-between;  
+    border-top: 1px solid black;
+
 }
 .lowerfot i{
     justify-content: space-between; 
