@@ -329,9 +329,35 @@ input[type="number"]{
     color: #333;
 }
 
-
-
-#home{
-    display: block;
+footer{
+    width: 90.1%;
+    background-color: #9c9c9c;
+    margin: auto;    
+    color: rgb(230, 230, 230);
 }
+.footer-con{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
 
+}
+.footer-con p{
+    font-size: 15px;
+}
+.footer-con:hover{
+    background-color: #b4b4b4;
+}
+.lowerfot{
+    background-color: #9c9c9c;
+    margin: auto;   
+    justify-content: space-between;  
+    border-top: 1px solid black;
+
+}
+.lowerfot:hover{
+    background-color: #b4b4b4;
+}
+.lowerfot i{
+    justify-content: space-between; 
+}
