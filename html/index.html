@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style-nav.css">
+    <script src="../js/app-page.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -15,8 +16,7 @@
         <nav>
             <div class="container">
                 <h1><a href="index.html">Kerberos</a></h1>
-                
-                <a class="home" onclick="goto('#home')">Home</a>
+                <a class="home" href="index.html">Home</a>
                 <a class="about" onclick="goto('#about')">About</a>
                 <a class="shop" onclick="goto('#shop')">Shop</a>
                 <i class="fas fa-search" onclick="slideSearch(this)"></i>
@@ -40,6 +40,7 @@
                 </ul>
                 <button><a href="#checkout">Chechout</a></button>
             </div>
+
         </div>
         <!-- /nav-bar -->
         
@@ -47,12 +48,18 @@
     </header>
 
     <main>
-        <div class="main-container">
+        <article id="home" class="main-container">
             <div class="container">
-                <div class="hero"></div>
+                <div class="hero">
+                    <div class="text">
+                    <p>On my wish list</p>
+                    <h2>Comfy and conscious sets</h2>
+                    <button onclick="goto('#shop')">SHOP NOW</button>
+                </div>
+                </div>
             </div>
-        </div>
-        <div>
+        </article>
+        <article id="about">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, provident quod adipisci architecto fugit atque qui, accusantium aliquam totam molestiae possimus ratione harum eius commodi eos esse veniam ex tempore.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa consectetur labore doloremque commodi inventore debitis rerum soluta possimus id, dolorem optio delectus alias, velit hic, vel harum illo nobis totam.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum saepe deleniti ducimus consequuntur aspernatur velit eos nostrum adipisci optio. Enim commodi officiis magnam optio consequatur, voluptatum veritatis iusto dicta.</p>

@@ -9,6 +9,7 @@ body {
     color: #333;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
+    overflow-x: hidden;
 
 
 }
@@ -16,19 +17,24 @@ body {
     position: sticky;
     top: 0;
     z-index: 3;
+    opacity: .2;
 } 
+
+.main-header:hover{
+    opacity: 0.8;
+}
 .container{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 90%;
     height: 100%;
 }
 
 nav{
-    width: 80%;
+    width: 90.1%;
     height: 64px;
-    background-color: #fdfdfd;
+    background-color: #fff;
     position: relative;
     z-index: 1;
     margin: auto;
@@ -40,11 +46,22 @@ nav h1 {
     transform: translateY(-50%);
     color: #333;
     text-transform: uppercase;
+    font-size: 32px;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav i:hover{
+    color: rgb(147, 147, 147);
 }
 
 nav h1 a {
     text-decoration: none;
     color: #333;
+    
+    
 }
 
 nav .home{
@@ -55,8 +72,11 @@ nav .home{
     /* margin-right: 200px; */
     text-decoration: none;
     color: #333;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-weight: bolder;
 }
 
 nav .about{
@@ -67,8 +87,11 @@ nav .about{
     /* margin-right: 120px; */
     text-decoration: none;
     color: #333;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-weight: bolder;
 }
 
 nav .shop{
@@ -79,8 +102,11 @@ nav .shop{
     /* margin-right: 60px; */
     text-decoration: none;
     color: #333;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-weight: bolder;
 }
 
 nav .fa-search{
@@ -90,7 +116,7 @@ nav .fa-search{
     right: 50px;
     width: 30px;
     height: 30px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
 }
@@ -101,7 +127,7 @@ nav .fa-shopping-cart{
     right: 0;
     width: 30px;
     height: 30px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
 }
@@ -113,7 +139,7 @@ nav .fa-shopping-cart{
 
 .search {
     height: 64px;
-    width: 80%;
+    width: 90%;
     transform: translateX(-50%);
     left: 50%;
     background-color: #fdfdfd;
@@ -130,15 +156,97 @@ nav .fa-shopping-cart{
 
 .shopping-cart {
     /* height: 64px; */
-    width: 30%;
+    top: 55px;
+    width: 17%;
     transform: translateX(-50%);
-    left: 80%;
-    background-color: #fdfdfd;
+    left: 89%;
+    background-color: rgb(86, 86, 86, 1);
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     transition: .4s;
+     border-radius: 9px;
+    /* border-block: 2px solid #333;  */
     
 }
+
+.shop-container{
+    min-width: 98%;
+    margin-left: 2.5vw;
+    flex-grow: 3;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.shop-container h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.shop-container ul{
+    list-style: none;
+    padding: 0;
+    width: 70%;
+}
+
+.shop-container li{
+    overflow: auto;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.cart-quantity-input{
+    border: none;
+    outline: none;
+    padding: 2px;
+    border-radius: 5px;
+    width: 16px;
+    height: 12px;
+    margin-top: 4.5px;
+    color: #fff;
+    background: rgb(86, 86, 86);
+    
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+.cart-quantity-input:hover, .cart-quantity-input:focus{
+    background: #ff008b;
+    color: #fff;
+}
+
+.remove-x:hover{
+    color: red;
+    
+}
+
+.shop-container li.total{
+    padding-top:10px;
+    margin-top:6px;
+}
+
+.cart-button{
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid  #fff;
+    
+    color: #fff;
+    transition: .4s;
+    width: 89px;
+    margin-bottom: 6px; 
+    cursor: pointer;  
+}
+
 
 .search input{
     width: calc(100% - 180px);
@@ -157,15 +265,17 @@ nav .fa-shopping-cart{
     border: 2px solid  #333;;
     color: #333;
     transition: .4s;
+    cursor: pointer;
 }
+
 
 .search input::placeholder{
     color: #b4b4b4;
 }
 
 .search button:hover{
-    background-color: #fff;
-    color: #212121;
+    background-color: #333;
+    color: #fff;
 }
 
 .hero{
@@ -173,6 +283,55 @@ nav .fa-shopping-cart{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 82vh;
+    height: 109vh;
+    position: relative;
+    top: -160px;
+    
+}
+
+.text{
+    margin: auto;
+    color: #fff;
+    position: relative;
+    top: 70%;
+    left: 60%;
+    transform: translateX(-50%);
+    
+    
+}
+
+.text p{
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+
+.text h2{
+    font-size: 42px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+
+}
+
+.text button{
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid  #fff;
+    color: #fff;
+    width: 102px;
+    margin-top: 10px; 
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.text button:hover,
+.cart-button:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+#home{
+    display: block;
 }
 
