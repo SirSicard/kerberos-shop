@@ -10,8 +10,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
     overflow-x: hidden;
-
-
 }
 .main-header{
     position: sticky;
@@ -23,6 +21,7 @@ body {
 .main-header:hover{
     opacity: 0.8;
 }
+
 .container{
     position: relative;
     left: 50%;
@@ -52,16 +51,13 @@ nav h1 {
     font-weight: bold;
 }
 
-nav a:hover,
-nav i:hover{
+nav a:hover, nav i:hover{
     color: rgb(147, 147, 147);
 }
 
 nav h1 a {
     text-decoration: none;
     color: #333;
-    
-    
 }
 
 nav .home{
@@ -208,7 +204,6 @@ nav .fa-shopping-cart{
     margin-top: 4.5px;
     color: #fff;
     background: rgb(86, 86, 86);
-    
 }
 
 input::-webkit-inner-spin-button,
