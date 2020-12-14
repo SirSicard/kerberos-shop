@@ -22,10 +22,10 @@ function scrollAppear(){
     let product = document.querySelectorAll('.product');
     
     //med window.innerHeigth så får vi reda på hur stor skärmen är och vi sparar det i en variable screenPosition
-    let screenPosition = window.innerHeight / 1.3;
+    let screenPosition = window.innerHeight;
 
     //skapar en variable med värdet 780 vilket kommer att översättas till 780 millisekunder
-    let interval = 780;
+    let interval = 150;
 
     //vi loopar igenom alla produkterna med en forEach arrow function
     product.forEach((products, index) =>{
