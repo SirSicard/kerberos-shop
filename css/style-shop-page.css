@@ -50,13 +50,20 @@
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
     margin: 25px;
+
 }
+
+
 .product-img img{
     width: 100%;
 }
+
+
+
 div.content{
     padding: 17px 30px;
     letter-spacing: 1.5px;
+    
 }
 
 .content h2{
@@ -151,3 +158,13 @@ div.content{
     cursor: pointer;
 }
 
+.product{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s all ease-in-out;
+}
+
+.product-appear{
+    opacity: 1;
+    transform: translateY(0px);    
+}
