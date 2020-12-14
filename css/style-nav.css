@@ -8,10 +8,8 @@ body {
 
     color: #333;
     font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #e9e4e1;
     overflow-x: hidden;
-
-
 }
 .main-header{
     position: sticky;
@@ -23,6 +21,7 @@ body {
 .main-header:hover{
     opacity: 0.8;
 }
+
 .container{
     position: relative;
     left: 50%;
@@ -31,7 +30,7 @@ body {
     height: 100%;
 }
 
-nav{
+.main-nav{
     width: 90.1%;
     height: 64px;
     background-color: #fff;
@@ -40,7 +39,7 @@ nav{
     margin: auto;
 }
 
-nav h1 {
+.main-nav h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -52,19 +51,17 @@ nav h1 {
     font-weight: bold;
 }
 
-nav a:hover,
-nav i:hover{
+.main-nav a:hover,
+.main-nav i:hover{
     color: rgb(147, 147, 147);
 }
 
-nav h1 a {
+.main-nav h1 a {
     text-decoration: none;
     color: #333;
-    
-    
 }
 
-nav .home{
+.main-nav .home{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -79,7 +76,7 @@ nav .home{
     font-weight: bolder;
 }
 
-nav .about{
+.main-nav .about{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -94,7 +91,7 @@ nav .about{
     font-weight: bolder;
 }
 
-nav .shop{
+.main-nav .shop{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -109,7 +106,7 @@ nav .shop{
     font-weight: bolder;
 }
 
-nav .fa-search{
+.main-nav .fa-search{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -120,7 +117,7 @@ nav .fa-search{
     cursor: pointer;
     border: none;
 }
-nav .fa-shopping-cart{
+.main-nav .fa-shopping-cart{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -198,7 +195,7 @@ nav .fa-shopping-cart{
     
 }
 
-.cart-quantity-input{
+.amount{
     border: none;
     outline: none;
     padding: 2px;
@@ -208,7 +205,6 @@ nav .fa-shopping-cart{
     margin-top: 4.5px;
     color: #fff;
     background: rgb(86, 86, 86);
-    
 }
 
 input::-webkit-inner-spin-button,
@@ -220,12 +216,16 @@ input[type="number"]{
     -moz-appearance: textfield;
 }
 
-.cart-quantity-input:hover, .cart-quantity-input:focus{
+.amount:hover, .amount:focus{
     background: #ff008b;
     color: #fff;
 }
 
-.remove-x:hover{
+.remove{
+    cursor: pointer;
+}
+
+.remove:hover{
     color: red;
     
 }
@@ -239,12 +239,16 @@ input[type="number"]{
     padding: 10px 15px;
     background-color: transparent;
     border: 2px solid  #fff;
-    
     color: #fff;
     transition: .4s;
     width: 89px;
     margin-bottom: 6px; 
     cursor: pointer;  
+}
+
+.cart-button a {
+    text-decoration: none;
+    color: #fff;
 }
 
 
@@ -331,7 +335,7 @@ input[type="number"]{
 
 footer{
     width: 90.1%;
-    background-color: #9c9c9c;
+    background-color: #585856;
     margin: auto;    
     color: rgb(230, 230, 230);
 }
@@ -346,10 +350,10 @@ footer{
     font-size: 15px;
 }
 .footer-con:hover{
-    background-color: #b4b4b4;
+    background-color: #585856;
 }
 .lowerfot{
-    background-color: #9c9c9c;
+    background-color: #585856;
     margin: auto;   
     justify-content: space-between;  
     border-top: 1px solid black;
