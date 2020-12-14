@@ -21,3 +21,4 @@ function slideShoppingCart(){
         shoppingCart.classList.add("hide-cart");
     }
 }
+
