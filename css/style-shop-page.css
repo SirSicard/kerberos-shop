@@ -12,17 +12,20 @@
     margin: auto;
     list-style: none;
     
+    
 }
 
 
 .catogories ol .rest{
     padding-left: 10px;
     font-size: 11px;
+    cursor: pointer;
 }
 
 .catogories ol .all{
     font-weight: bold;
     font-size: 13px;
+    cursor: pointer;
 }
 
 .catogories ol .all a{
