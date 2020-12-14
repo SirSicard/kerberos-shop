@@ -12,6 +12,6 @@ function goBack(){
     }
 
     for(let productInfo of document.querySelectorAll('.products')){
-        productInfo.style.display = 'block';
+        productInfo.style.display = 'flex';
     }
 }

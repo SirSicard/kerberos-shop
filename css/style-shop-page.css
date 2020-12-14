@@ -72,6 +72,7 @@ div.content{
 .product-info{
     width: 90%;
     margin: auto;
+    display: none;
 }
 
 .info-product-img{

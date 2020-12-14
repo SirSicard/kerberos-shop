@@ -78,7 +78,7 @@
             
         <div class="products">   
             <div class="product">
-                <div onclick="goToProductInfo('product000001')" class="product-img">
+                <div onclick="goToProductInfo('#product000001')" class="product-img">
                     <img src="../assets/img/products/pants.jpg"/>
                 </div>
                 
@@ -95,6 +95,45 @@
 
 
             </div>           
+        
+            <div class="product">
+                <div onclick="goToProductInfo('#product000002')" class="product-img">
+                    <img src="../assets/img/products/hats.jpg"/>
+                </div>
+                
+                <div class="content">
+
+                    <h2>hat</h2>
+                    <ul>
+                        <li class="product-artnr">Art.no: <span>000002</span></li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>49.89</span>
+                    </button>
+                </div>
+
+
+            </div> 
+            
+            <div class="product">
+                <div onclick="goToProductInfo('#product000003')" class="product-img">
+                    <img src="../assets/img/products/shirt.jpg"/>
+                </div>
+                
+                <div class="content">
+
+                    <h2>Jeans</h2>
+                    <ul>
+                        <li class="product-artnr">Art.no: <span>000003</span></li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>299.99</span>
+                    </button>
+                </div>
+
+
+            </div>           
+        
         </div>
 
         <div class="product-info" id="product000001">
@@ -121,6 +160,53 @@
                 
             
         </div>
+
+        <div class="product-info" id="product000002">
+        
+            
+            <div class="info-product-img">
+                <img src="../assets/img/products/hats.jpg"/>
+            </div>
+                <p>Hat in felted fabric with a grosgrain band. Width of brim 6 cm.</p>
+
+                <ul>
+                    <li>Composition - <span>Polyester 100%</span></li>
+                    <li>Art. No. - <span>000002</span></li>
+                </ul>
+
+                <div class="info-buttons">
+                <button onclick="getProductInfo(this)"><span>49.89</span></button>
+
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+                </div>
+
+            
+        
+    </div>
+
+    <div class="product-info" id="product000003">
+        
+            
+        <div class="info-product-img">
+            <img src="../assets/img/products/shirt.jpg"/>
+        </div>
+            <p>Shirt in airy end-on-end cotton with a button-down collar, classic front and open chest pocket. Long sleeves with adjustable buttoning at the cuffs, a yoke with a pleat and hanger at the back, and a rounded hem. Slightly longer at the back. Regular fit – a classic fit with good room for movement and a gently tapered waist to create a comfortable, tailored silhouette.</p>
+
+            <ul>
+                <li>Fit - <span>Regular fit</span></li>
+                <li>Composition - <span>Cotton 100%</span></li>
+                <li>Art. No. - <span>000003</span></li>
+            </ul>
+
+            <div class="info-buttons">
+            <button onclick="getProductInfo(this)"><span>299.99</span></button>
+
+            <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>
+
+        
+    
+</div>
     </div>
     </article>
 
