@@ -198,7 +198,7 @@ body {
     
 }
 
-.cart-quantity-input{
+.amount{
     border: none;
     outline: none;
     padding: 2px;
@@ -220,12 +220,16 @@ input[type="number"]{
     -moz-appearance: textfield;
 }
 
-.cart-quantity-input:hover, .cart-quantity-input:focus{
+.amount:hover, .amount:focus{
     background: #ff008b;
     color: #fff;
 }
 
-.remove-x:hover{
+.remove{
+    cursor: pointer;
+}
+
+.remove:hover{
     color: red;
     
 }
@@ -244,6 +248,11 @@ input[type="number"]{
     width: 89px;
     margin-bottom: 6px; 
     cursor: pointer;  
+}
+
+.cart-button a {
+    text-decoration: none;
+    color: #fff;
 }
 
 

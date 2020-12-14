@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style-nav.css">
     <script src="../js/app-page.js"></script>
     <link rel="stylesheet" href="../css/style-shop-page.css">
+    <script src="../js/app-catogories.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -39,7 +40,7 @@
                     <div class="list-items"></div>
                     <li class="total">Total <span>0</span></li>
                 </ul>
-                <button><a href="#checkout">Chechout</a></button>
+                <button class="cart-button"><a href="#checkout">Chechout</a></button>
             </div>
 
         </div>
@@ -63,16 +64,16 @@
     <article id="about">
 
     </article>
-        <!-- Adding this DIV for Testing the function odf the Shopping Cart -->
+
     <article id="shop" class="shopping-page">
 
         <div class="container">
                 <nav class="catogories">
                     <ol>
-                        <li><a href="">All</a></li>
-                        <li><a href="">Shirt</a></li>
-                        <li><a href="">Pants</a></li>
-                        <li><a href="">Hats</a></li>
+                        <li class="all"><a onclick="catogoriesSearch(this)">All</a></li>
+                        <li class="rest"><a onclick="catogoriesSearch(this)">Shirt</a></li>
+                        <li class="rest"><a onclick="catogoriesSearch(this)">Pants</a></li>
+                        <li class="rest"><a onclick="catogoriesSearch(this)">Hats</a></li>
                     </ol>
                 </nav>
             
@@ -122,7 +123,7 @@
                 
                 <div class="content">
 
-                    <h2>Jeans</h2>
+                    <h2>Shirt</h2>
                     <ul>
                         <li class="product-artnr">Art.no: <span>000003</span></li>
                     </ul>   

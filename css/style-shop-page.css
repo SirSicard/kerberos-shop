@@ -8,20 +8,33 @@
 .catogories ol{
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 20%;
     margin: auto;
+    list-style: none;
     
 }
 
-.catogories ol li{
+
+.catogories ol .rest{
     padding-left: 10px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
-.catogories ol li a{
+.catogories ol .all{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.catogories ol .all a{
     text-decoration: none;
     color: #333;
 }
+
+.catogories ol .rest a{
+    text-decoration: none;
+    color: rgb(132, 132, 132);
+}
+
 
 .products{
     display: flex;
