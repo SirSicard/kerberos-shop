@@ -19,10 +19,13 @@ list-style: none;
 }
 
 #checkout{
-    display: none;
-    background-color: rgb(230, 230, 230);
+display: none;
+background-color: rgb(230, 230, 230);
 width: 90.1%;
 margin: auto;
-height: 28vh;
+height: 50vh;
 list-style: none;
+}
+#checkout img{
+    width: 70px;
 }
