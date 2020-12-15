@@ -60,6 +60,12 @@ function getProductInfo(button) {
     let totalElement = document.querySelector(".total span");
     totalElement.textContent = total;
   }
+
+  function addCartToCheckout(checkout){
+    let price = span.textContent;
+    let parent = button.closest("content");
+    let h1 = parent.querySelector("h1");
+  }
   
   function search(input) {
   

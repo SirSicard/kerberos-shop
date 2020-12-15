@@ -329,6 +329,9 @@ input[type="number"]{
     color: #333;
 }
 
+.checkout{
+    width: 80%;
+}
 
 footer{
     width: 90.1%;
