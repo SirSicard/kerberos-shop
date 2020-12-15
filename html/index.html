@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/style-shop-page.css">
     <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
+    <script src="../js/app-checkout.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -40,7 +41,7 @@
                     <div class="list-items"></div>
                     <li class="total">Total <span>0</span></li>
                 </ul>
-                <button class="cart-button"><a href="#checkout">Checkout</a></button>
+                <button onclick = "gotoCheckout('#checkout')" class="cart-button"><a>Checkout</a></button>
             </div>
         </div>
         <!-- /nav-bar -->
@@ -272,17 +273,19 @@
         </div>
     </article>
     <!-- End of about page -->
+    <article id="checkout">
+        <div class="checkout">
+            <div id="checkoutData">
+           <h1>CHECKOUT</h1>
+           <ul>
+               <div class="list-items"></div>
+               <li class="total"><span>Total</span></li>
+           </ul>
+           <button onclick="paymentAlert()">PAYMENT</button>
+           </div>
+       </div>
+    </article>
     </main>
-    <div id="checkout" class="checkout">
-         <div id="cart">
-        <h1>CHECKOUT</h1>
-        <ul>
-            <div class="list-items"></div>
-            <li class="total"><span>Total</span></li>
-        </ul>
-        <button>PAYMENT</button>
-        </div>
-    </div>
     <footer>
         <span class="footer-con">
             <div class="contact">
