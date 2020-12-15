@@ -168,3 +168,7 @@ div.content{
     opacity: 1;
     transform: translateY(0px);    
 }
+
+.info-buttons h2{
+    display: none;
+}
