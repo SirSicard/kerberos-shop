@@ -43,7 +43,7 @@ function getProductInfo(button) {
       let cart = document.querySelector("#cart .list-items");
       cart.insertAdjacentHTML("beforeend", li);
   
-      let;
+      
     }
     updateTotal();
   }
