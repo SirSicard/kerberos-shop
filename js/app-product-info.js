@@ -4,6 +4,8 @@ function goToProductInfo(id){
         productInfo.style.display = 'none';
     }
     document.querySelector(id).style.display = 'block';
+    let categories = document.querySelector('.categories');
+    categories.style.display = 'none';
 }
 
 function goBack(){
@@ -14,6 +16,8 @@ function goBack(){
     for(let productInfo of document.querySelectorAll('.products')){
         productInfo.style.display = 'flex';
     }
+    let categories = document.querySelector('.categories');
+    categories.style.display = 'flex';
 }
 
 function scrollAppear(){
