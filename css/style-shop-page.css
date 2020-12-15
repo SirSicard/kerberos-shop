@@ -1,36 +1,39 @@
-.catogories{
+.categories{
     display: flex;
     justify-content: center;
     height: 8vh;
     
 }
 
-.catogories ol{
+.categories ol{
     display: flex;
     justify-content: space-around;
     width: 20%;
     margin: auto;
     list-style: none;
     
+    
 }
 
 
-.catogories ol .rest{
+.categories ol .rest{
     padding-left: 10px;
     font-size: 11px;
+    cursor: pointer;
 }
 
-.catogories ol .all{
+.categories ol .all{
     font-weight: bold;
     font-size: 13px;
+    cursor: pointer;
 }
 
-.catogories ol .all a{
+.categories ol .all a{
     text-decoration: none;
     color: #333;
 }
 
-.catogories ol .rest a{
+.categories ol .rest a{
     text-decoration: none;
     color: rgb(132, 132, 132);
 }
@@ -47,13 +50,20 @@
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
     margin: 25px;
+
 }
+
+
 .product-img img{
     width: 100%;
 }
+
+
+
 div.content{
     padding: 17px 30px;
     letter-spacing: 1.5px;
+    
 }
 
 .content h2{
@@ -148,3 +158,13 @@ div.content{
     cursor: pointer;
 }
 
+.product{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s all ease-in-out;
+}
+
+.product-appear{
+    opacity: 1;
+    transform: translateY(0px);    
+}
