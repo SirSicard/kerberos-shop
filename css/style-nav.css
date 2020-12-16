@@ -293,6 +293,17 @@ input[type="number"]{
     
 }
 
+.hero-2{
+    background: url("../assets/img/products/shirt.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 109vh;
+    position: relative;
+    top: -160px;
+    
+}
+
 .text{
     margin: auto;
     color: #fff;
@@ -331,6 +342,38 @@ input[type="number"]{
 .cart-button:hover{
     background-color: #fff;
     color: #333;
+}
+
+.fa-chevron-left {
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    translate: transformY(-50%);
+    left: 2%;
+    cursor: pointer;
+    
+}
+
+.fa-chevron-right {
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    translate: transformY(-50%);
+    right: 2%;
+    cursor: pointer;
+
+    
+}
+
+.fa-chevron-right:hover,
+.fa-chevron-left:hover{
+    color: #ff008b;
 }
 
 footer{
