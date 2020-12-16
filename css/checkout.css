@@ -23,8 +23,9 @@ display: none;
 background-color: rgb(230, 230, 230);
 width: 90.1%;
 margin: auto;
-height: 50vh;
+height: 80vh;
 list-style: none;
+font-size: 25px;
 }
 #checkout img{
     width: 70px;
