@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style-nav.css">
     <link rel="stylesheet" href="../css/about-section.css">
     <link rel="stylesheet" href="../css/style-shop-page.css">
+    <link rel="stylesheet" href="../css/image-slider-shop-page.css">
     <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
 </head>
@@ -63,7 +64,35 @@
         </article>
 
     <article id="shop" class="shopping-page">
+
+        <div class="carousel">
+            
+            <i class="fas fa-chevron-left carousel_button button-left is-hidden"></i>
+            <div class="carousel_track-container">
+                <ul class="carousel_track">
+                    <li class="carousel_slide current-slide">
+                        <img class="carousel_image" src="../assets/img/products/shirt.jpg" alt="">
+                    </li>
+                    <li class="carousel_slide">
+                        <img class="carousel_image" src="../assets/img/products/pants.jpg" alt="">
+                    </li>
+                    <li class="carousel_slide">
+                        <img class="carousel_image" src="../assets/img/products/hats.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            
+            <i id="btnRight" class="fas fa-chevron-right carousel_button button-right"></i>
+            <div class="carousel_nav">
+                <button class="carousel_indicator current-slide"></button>
+                <button class="carousel_indicator"></button>
+                <button class="carousel_indicator"></button>
+            </div>
+        </div>
         <div class="container">
+
+
                 <nav class="categories">
                     <ol>
                         <li class="all"><a onclick="catogoriesSearch(this)">All</a></li>
@@ -321,5 +350,6 @@
     <script src="../js/app-nav.js"></script>
     <script src="../js/app-product-info.js"></script>
     <script src="../js/app-hero-img.js"></script>
+    <script src="../js/app-image-slider.js"></script>
 </body>
 </html>
