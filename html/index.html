@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="../css/style-nav.css">
     <link rel="stylesheet" href="../css/about-section.css">
     <link rel="stylesheet" href="../css/style-shop-page.css">
+    <link rel="stylesheet" href="../css/checkout.css">
     <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
+    <script src="../js/app-checkout.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -40,7 +42,7 @@
                     <div class="list-items"></div>
                     <li class="total">Total <span>0</span></li>
                 </ul>
-                <button class="cart-button"><a href="#checkout">Chechout</a></button>
+                <button onclick = "gotoCheckout('#checkout')" class="cart-button"><a>Checkout</a></button>
             </div>
         </div>
         <!-- /nav-bar -->
@@ -376,8 +378,22 @@
         </div>
     </article>
     <!-- End of about page -->
+    <article id="checkout">
+        <div class="checkout">
+            <div id="checkoutData">
+           <h1>CHECKOUT</h1>
+           <ul class="checkout-li">
+           </ul>
+           <button onclick="paymentAlert()">Payment</button>
+           </div>
+           <h3>DU KAN FÖLJA DIN BESTÄLLNING PÅ: <a href="https://www.postnord.se/en/our-tools/track-and-trace">Postnord</a> </h3>
+           <p>Synpunkter?<a href=""> Kontakta oss!</a></p>
+           <img src="../assets/img/extra/giphy.gif" alt="PAYMENT SUCCED!">
+           <img src="../assets/img/extra/DHL_Logo.svg.png" alt="">
+           <img src="../assets/img/extra/postnord-logo-2560x1080_1250x528_90.jpg" alt="">
+       </div>
+    </article>
     </main>
-    
     <footer>
         <span class="footer-con">
             <div class="contact">

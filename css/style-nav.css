@@ -333,6 +333,10 @@ input[type="number"]{
     color: #333;
 }
 
+.checkout{
+    width: 80%;
+}
+
 footer{
     width: 90.1%;
     background-color: #585856;
@@ -365,3 +369,4 @@ footer{
 .lowerfot i{
     justify-content: space-between; 
 }
+
