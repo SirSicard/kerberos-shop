@@ -15,7 +15,8 @@
 .inner-container {
   width: 55%;
   background: #585856;
-  padding: 90px;
+  padding: 65px;
+  border: solid gray;
 }
 
 .inner-container h1 {
@@ -33,11 +34,21 @@
   margin-bottom: 40px;
 }
 
+.about-text-names {
+  display: flex;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  width: 55%;
+}
+
 .skills {
   display: flex;
   justify-content: space-between;
   font-weight: 650;
-  width: 70%;
+  width: 75%;
   color: white;
+  
 }
 /* End of Kerberos group styling */
