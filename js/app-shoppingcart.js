@@ -60,6 +60,10 @@ function getProductInfo(button) {
     let totalElement = document.querySelector(".total span");
     totalElement.textContent = total;
   }
+  /* Adding product from cart to checkout */
+  function addCartToCheckout(checkout){
+    
+  }
   
   function search(input) {
   

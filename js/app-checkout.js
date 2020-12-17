@@ -1,5 +1,3 @@
-// Funktionen som tar oss till checkout sidan, dvs gömmer alla artiklar och visar bara checkouten 
-// efter att ha tryckt på knappen
 function gotoCheckout(id){    
     for(let article of document.querySelectorAll('article')){
         article.style.display = 'none';
@@ -14,7 +12,7 @@ function emptyCart(){
    let cartItems = document.querySelectorAll('.item')
    let cartItemsArray = Array.from(cartItems)
    console.log(cartItemsArray);
-                
+
    let checkout = document.querySelector(".checkout ul")
    for(element of cartItemsArray){
        checkout.insertAdjacentHTML('beforeend', element.outerHTML)
@@ -27,7 +25,7 @@ function emptyCart(){
 //    while(cartItems.hasChildNodes()){
 //        cartItems.removeChild(cartItems.firstChild)
 //    }
-   updateTotal();
+updateTotal();
 }
 function paymentAlert(){
     alert("Thanks for your purchase!");
