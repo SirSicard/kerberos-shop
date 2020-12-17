@@ -16,4 +16,5 @@ function catogoriesSearch(text) {
       product.style.display = "none";
     }
   }
+
 }
