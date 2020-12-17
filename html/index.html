@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kerberos Shop</title>
+    <!-- Fonts/FA import -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- CSS imports -->
     <link rel="stylesheet" href="../css/style-nav.css">
     <link rel="stylesheet" href="../css/about-section.css">
     <link rel="stylesheet" href="../css/style-shop-page.css">
     <link rel="stylesheet" href="../css/checkout.css">
     <link rel="stylesheet" href="../css/contact-style.css".css">
+    <!-- Script import -->
     <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
     <script src="../js/app-checkout.js"></script>
-    <script src="../js/app-shoppingcart.js"></script>
-    <script src="../js/app-nav.js"></script>
-    <script src="../js/app-product-info.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -28,7 +28,7 @@
                 <a class="home" onclick="goto('#home')">Home</a>
                 <a class="about" onclick="goto('#about')">About</a>
                 <a class="shop" onclick="goto('#shop')">Shop</a>
-                <a class="contact-page-nav" onclick="goto('#home')">Contact</a>
+                <a class="contact-page-nav" onclick="goto('#contact-page-nav')">Contact</a>
                 <i class="fas fa-search" onclick="slideSearch(this)"></i>
                 <i class="fas fa-shopping-cart" onclick="slideShoppingCart(this)"></i>
             </div>
@@ -54,6 +54,7 @@
     </header>
 
     <main>
+        <!-- Hero landing page -->
         <article id="home" class="main-container">
             <div class="container">
                 <div class="hero">
@@ -65,17 +66,19 @@
                 </div>
             </div>
         </article>
-
-    <article id="shop" class="shopping-page">
-        <div class="container">
-            <nav class="categories">
-                <ol>
-                    <li class="all"><a onclick="catogoriesSearch(this)">All</a></li>
-                    <li class="rest"><a onclick="catogoriesSearch(this)">Shirt</a></li>
-                    <li class="rest"><a onclick="catogoriesSearch(this)">Pants</a></li>
-                    <li class="rest"><a onclick="catogoriesSearch(this)">Hats</a></li>
-                </ol>
-            </nav>
+        <!-- End of hero landing -->
+    
+        <!-- Shopping page -->
+        <article id="shop" class="shopping-page">
+            <div class="container">
+                <nav class="categories">
+                    <ol>
+                        <li class="all"><a onclick="catogoriesSearch(this)">All</a></li>
+                        <li class="rest"><a onclick="catogoriesSearch(this)">Shirt</a></li>
+                        <li class="rest"><a onclick="catogoriesSearch(this)">Pants</a></li>
+                        <li class="rest"><a onclick="catogoriesSearch(this)">Hats</a></li>
+                    </ol>
+                </nav>
 
         <div class="products">   
             <div class="product">
@@ -222,7 +225,7 @@
                 </div>
             </div>           
         </div>
-
+        <!-- Shopping page click product info -->
         <div class="product-info" id="product000001">
             <div class="info-product-img">
                 <img src="../assets/img/products/pants.jpg"/>
@@ -374,12 +377,13 @@
             </div>  
         </div>
     </article>
+    <!-- End of shopping page -->
      
     <!-- start of contact page -->
     <article id="contact-page-nav" class="contact-page">
         <div class="contact-content">
             <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, error.</p>
+            <p>While we´re good with smoke signals, there are simpler ways for us to get in touch and answer your questions.</p>
         </div>
         <div class="contact-container">
             <div class="contactInfo">
@@ -505,5 +509,11 @@
         </div>
     </footer>
     <!-- End of footer -->
+
+    <!-- Script import -->
+    <script src="../js/app-shoppingcart.js"></script>
+    <script src="../js/app-nav.js"></script>
+    <script src="../js/app-product-info.js"></script>
+    <!-- End of script import -->
 </body>
 </html>

@@ -25,7 +25,7 @@ function emptyCart(){
 //    while(cartItems.hasChildNodes()){
 //        cartItems.removeChild(cartItems.firstChild)
 //    }
-   updateTotal();
+updateTotal();
 }
 function paymentAlert(){
     alert("Thanks for your purchase!");
