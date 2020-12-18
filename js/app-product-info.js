@@ -25,33 +25,32 @@ function scrollAppear(){
 
     let product = document.querySelectorAll('.product');
     
-    //med window.innerHeigth så får vi reda på hur stor skärmen är och vi sparar det i en variable screenPosition
+    //with window.innerHeigth we find out how big the window of the browser is
     let screenPosition = window.innerHeight;
 
-    //skapar en variable med värdet 780 vilket kommer att översättas till 780 millisekunder
     let interval = 150;
 
-    //vi loopar igenom alla produkterna med en forEach arrow function
+    //loop through product with forEach, and use an arrow function
     product.forEach((products, index) =>{
         
-        //skapar en variable med funktionen getboundingclientrect som ger information om vad ett element befinner sig i förhållande till var jag är på sidan
-        //vi letar efter distansen vi har från toppen av skärmen till elementet products vi letar efter
+ 
+        //looking for the distance between the windows top to the element products
         let productPosition = products.getBoundingClientRect().top;
         
-        //setTimeout-funktionen kommer att skapa en delay på varje produkt
+        //setTimeout-function will set a delay for each index of products * interval (milliseconds)
         setTimeout(function (){
 
-            //om vårt element är mindre än skärmen så vill vi lägga till klassen product-appear till elementet  
+            //if productPosition is less then screenPosition add the class product-appear to products  
             if(productPosition < screenPosition) {
                 products.classList.add('product-appear');
             
             }
-        }, index * interval); // och vi gör detta i ett intervall med 780 millisekunder delay
+        }, index * interval);
         
         
     });
 
 }
 
-//skapar en eventlistner på scroll då vi anropar funktionen scrollAppear
+//addEventListener on scroll and run function scrollAppear
 window.addEventListener('scroll',scrollAppear);
