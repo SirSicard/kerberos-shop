@@ -15,17 +15,20 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
+//move slide function
 const moveToSlide = (track, currentSlide, targetSlide) =>{
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 }
 
+//update dotnav function
 const updateDots = (currentDot, targetDot) => {
     currentDot.classList.remove('current-slide');
     targetDot.classList.add('current-slide');
 }
 
+//hide left arrow when on first image, and hide right arrow when on last image
 const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
     if(targetIndex === 0) {
         prevButton.classList.add('is-hidden');
@@ -48,6 +51,7 @@ prevButton.addEventListener('click', e => {
     const prevDot = currentDot.previousElementSibling;
     const prevIndex = slides.findIndex(slide => slide === prevSlide)
 
+    //calling functions on clickevent
     hideShowArrows(slides, prevButton, nextButton, prevIndex)
     moveToSlide(track, currentSlide, prevSlide);
     updateDots(currentDot, prevDot);
@@ -62,6 +66,8 @@ nextButton.addEventListener('click', e => {
     const currentDot = dotsNav.querySelector('.current-slide')
     const nextDot = currentDot.nextElementSibling;
     const nextIndex = slides.findIndex(slide => slide === nextSlide)
+    
+    //calling functions on clickevent
     moveToSlide(track, currentSlide, nextSlide);
 
     updateDots(currentDot, nextDot);
@@ -85,6 +91,7 @@ dotsNav.addEventListener('click', e =>{
     const targetSlide = slides[targetIndex];
     console.log(targetIndex);
 
+    ////calling functions on click event
     moveToSlide(track, currentSlide, targetSlide);
 
     currentDot.classList.remove('current-slide');

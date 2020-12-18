@@ -1,16 +1,17 @@
-// ********************** slidedown funktion för min search-bar **********************//
 
-//sparar diven med klassen .search och sparar den i en variable
+
 let searchbar = document.querySelector(".search");
-//skapar en onclick funktion till min search icon
+//slide function for search input
 function slideSearch(){
-    //om jag trycker på knappen och den innehåller classen .hide ta bort classen hide annars lägg till classen .hide.
+    //if searchbar contains the class .hide-search, remove .hide-search from searchbar else add .hide-search
     if(searchbar.classList.contains("hide-search")){
         searchbar.classList.remove("hide-search");
     }else{
         searchbar.classList.add("hide-search")
     }
 }
+
+//**********************Same function for shopping-cart ***********************//
 
 let shoppingCart = document.querySelector(".shopping-cart");
 
