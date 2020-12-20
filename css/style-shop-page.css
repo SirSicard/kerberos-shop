@@ -1,150 +1,162 @@
-.catogories{
-    display: flex;
-    justify-content: center;
-    height: 8vh;
-    
+.categories {
+  display: flex;
+  justify-content: center;
+  height: 8vh;
 }
 
-.catogories ol{
-    display: flex;
-    justify-content: space-around;
-    width: 20%;
-    margin: auto;
-    list-style: none;
-    
+.categories ol {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin: auto;
+  list-style: none;
 }
 
-
-.catogories ol .rest{
-    padding-left: 10px;
-    font-size: 11px;
+.categories ol .rest {
+  padding-left: 10px;
+  font-size: 11px;
+  cursor: pointer;
 }
 
-.catogories ol .all{
-    font-weight: bold;
-    font-size: 13px;
+.categories ol .all {
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
 }
 
-.catogories ol .all a{
-    text-decoration: none;
-    color: #333;
+.categories ol .all a {
+  text-decoration: none;
+  color: #333;
 }
 
-.catogories ol .rest a{
-    text-decoration: none;
-    color: rgb(132, 132, 132);
+.categories ol .rest a {
+  text-decoration: none;
+  color: rgb(132, 132, 132);
 }
 
-
-.products{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.product{
-    width: 28%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-    margin: 25px;
-}
-.product-img img{
-    width: 100%;
-}
-div.content{
-    padding: 17px 30px;
-    letter-spacing: 1.5px;
+.product {
+  width: 28%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  margin: 25px;
 }
 
-.content h2{
-   text-transform: uppercase;
-   font-size: 22px; 
+.product-img img {
+  width: 100%;
 }
 
-
-.content ul{
-    list-style: none;
-    font-size: 14px;
+div.content {
+  padding: 17px 30px;
+  letter-spacing: 1.5px;
 }
 
-.content ul li{
-    font-size: 9px;
-    margin-left: 3px;
+.content h2 {
+  text-transform: uppercase;
+  font-size: 22px;
 }
 
-.content button{
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid  #333;
-    color: #333;
-    transition: .4s;
-    width: 89px;
-    margin: 6px 2px 6px 0px; 
-    cursor: pointer; 
-}
-.product-info{
-    width: 90%;
-    margin: auto;
-    display: none;
+.content ul {
+  list-style: none;
+  font-size: 14px;
 }
 
-.info-product-img{
-    width: 80%;
-    margin: auto;
+.content ul li {
+  font-size: 9px;
+  margin-left: 3px;
 }
 
-.info-product-img img{
-    width: 100%;
-    
+.content button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #333;
+  color: #333;
+  transition: 0.4s;
+  width: 89px;
+  margin: 6px 2px 6px 0px;
+  cursor: pointer;
+}
+.product-info {
+  width: 90%;
+  margin: auto;
+  display: none;
 }
 
-.product-info p{
-    width: 80%;
-    margin: auto;
-    padding: 20px 10px 20px 10px; 
-    color: #333;
+.info-product-img {
+  width: 80%;
+  margin: auto;
 }
 
-.product-info ul{
-    list-style: none;
-    margin: auto;
-    width: 80%;
-    padding-bottom: 10px;
+.info-product-img img {
+  width: 100%;
 }
 
-.product-info ul li{
-    letter-spacing: 1.5px;
-    font-weight: bolder;
-    color: #333;
+.product-info p {
+  width: 80%;
+  margin: auto;
+  padding: 20px 10px 20px 10px;
+  color: #333;
 }
 
-.product-info ul li span{
-    font-size: 11px;
-    color: #333;
+.product-info ul {
+  list-style: none;
+  margin: auto;
+  width: 80%;
+  padding-bottom: 10px;
 }
 
-.info-buttons{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: auto;
-    padding-bottom: 10px;
+.product-info ul li {
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+  color: #333;
 }
 
-.info-buttons button{
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid  #333;
-    color: #333;
-    transition: .4s;
-    width: 89px;
-    margin: 6px 2px 6px 0px; 
-    cursor: pointer; 
+.product-info ul li span {
+  font-size: 11px;
+  color: #333;
 }
 
-.info-buttons .fa-chevron-circle-left{
-    font-size: 48px;
-    color: #333;
-    cursor: pointer;
+.info-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
 }
 
+.info-buttons button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #333;
+  color: #333;
+  transition: 0.4s;
+  width: 89px;
+  margin: 6px 2px 6px 0px;
+  cursor: pointer;
+}
+
+.info-buttons .fa-chevron-circle-left {
+  font-size: 48px;
+  color: #333;
+  cursor: pointer;
+}
+
+.product {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s all ease-in-out;
+}
+
+.product-appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.info-buttons h2 {
+  display: none;
+}

@@ -1,0 +1,32 @@
+#checkout li {
+  list-style: none;
+}
+
+#checkout h1 {
+  font-size: 50px;
+}
+
+#checkout button {
+  padding: 10px 10px;
+  background-color: transparent;
+  border: 2px solid #333;
+  color: #333;
+  transition: 0.4s;
+  width: 89px;
+  margin: 6px 2px 6px 0px;
+  cursor: pointer;
+}
+
+#checkout {
+  display: none;
+  background-color: rgb(230, 230, 230);
+  width: 90.1%;
+  margin: auto;
+  height: 80vh;
+  list-style: none;
+  font-size: 25px;
+}
+
+#checkout img {
+  width: 70px;
+}

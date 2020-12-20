@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kerberos Shop</title>
+    <!-- Fonts/FA import -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- CSS imports -->
     <link rel="stylesheet" href="../css/style-nav.css">
     <link rel="stylesheet" href="../css/about-section.css">
-    <script src="../js/app-page.js"></script>
     <link rel="stylesheet" href="../css/style-shop-page.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/contact-style.css".css">
+    <!-- Script import -->
+    <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
+    <script src="../js/app-checkout.js"></script>
 </head>
 <body>
     <header class="main-header">
         <!-- nav-bar -->
         <nav class="main-nav">
             <div class="container">
-                <h1><a href="index.html">Kerberos</a></h1>
-                <a class="home" href="index.html">Home</a>
+                <h1><a onclick="goto('#home')">Kerberos</a></h1>
+                <a class="home" onclick="goto('#home')">Home</a>
                 <a class="about" onclick="goto('#about')">About</a>
                 <a class="shop" onclick="goto('#shop')">Shop</a>
+                <a class="contact-page-nav" onclick="goto('#contact-page-nav')">Contact</a>
                 <i class="fas fa-search" onclick="slideSearch(this)"></i>
                 <i class="fas fa-shopping-cart" onclick="slideShoppingCart(this)"></i>
             </div>
         </nav> 
+
         <div class="search hide-search">
             <div class="container">
-                
-                <input id="inputText" type="text" placeholder="search here"><button id="buttonClick" onclick="searching()">Search</button>
-                
+                <input id="inputText" type="text" placeholder="search here"><button id="buttonClick" onclick="searching()">Search</button> 
             </div>
         </div> 
 
@@ -41,35 +47,31 @@
                     <div class="list-items"></div>
                     <li class="total">Total <span>0</span></li>
                 </ul>
-                <button class="cart-button"><a href="#checkout">Chechout</a></button>
+                <button onclick = "gotoCheckout('#checkout')" class="cart-button"><a>Checkout</a></button>
             </div>
-
         </div>
         <!-- /nav-bar -->
-        
-        
     </header>
 
     <main>
+        <!-- Hero landing page -->
         <article id="home" class="main-container">
             <div class="container">
                 <div class="hero">
                     <div class="text">
-                    <p>On my wish list</p>
-                    <h2>Comfy and conscious sets</h2>
-                    <button onclick="goto('#shop')">SHOP NOW</button>
-                </div>
+                        <p>On my wish list</p>
+                        <h2>Comfy and conscious sets</h2>
+                        <button onclick="goto('#shop')">SHOP NOW</button>
+                    </div>
                 </div>
             </div>
         </article>
-    <article id="about">
-
-    </article>
-
-    <article id="shop" class="shopping-page">
-
-        <div class="container">
-                <nav class="catogories">
+        <!-- End of hero landing -->
+    
+        <!-- Shopping page -->
+        <article id="shop" class="shopping-page">
+            <div class="container">
+                <nav class="categories">
                     <ol>
                         <li class="all"><a onclick="catogoriesSearch(this)">All</a></li>
                         <li class="rest"><a onclick="catogoriesSearch(this)">Shirt</a></li>
@@ -77,113 +79,411 @@
                         <li class="rest"><a onclick="catogoriesSearch(this)">Hats</a></li>
                     </ol>
                 </nav>
-            
+
         <div class="products">   
             <div class="product">
                 <div onclick="goToProductInfo('#product000001')" class="product-img">
                     <img src="../assets/img/products/pants.jpg"/>
                 </div>
-                
                 <div class="content">
-
                     <h2>Jeans</h2>
                     <ul>
                         <li class="product-artnr">Art.no: <span>000001</span></li>
+                        <li>category: Pants</li>
                     </ul>   
                     <button onclick="getProductInfo(this)">
                     <span>499.99</span>
                     </button>
                 </div>
+            </div>   
 
-
-            </div>           
-        
             <div class="product">
                 <div onclick="goToProductInfo('#product000002')" class="product-img">
                     <img src="../assets/img/products/hats.jpg"/>
                 </div>
-                
                 <div class="content">
-
                     <h2>hat</h2>
                     <ul>
                         <li class="product-artnr">Art.no: <span>000002</span></li>
+                        <li>category: Hats</li>
                     </ul>   
                     <button onclick="getProductInfo(this)">
                     <span>49.89</span>
                     </button>
                 </div>
-
-
             </div> 
-            
+
             <div class="product">
                 <div onclick="goToProductInfo('#product000003')" class="product-img">
                     <img src="../assets/img/products/shirt.jpg"/>
                 </div>
-                
                 <div class="content">
-
                     <h2>Shirt</h2>
                     <ul>
                         <li class="product-artnr">Art.no: <span>000003</span></li>
+                        <li>category: Shirts</li>
                     </ul>   
                     <button onclick="getProductInfo(this)">
                     <span>299.99</span>
                     </button>
                 </div>
-
-
-            </div>           
-        
-        </div>
-
-        <div class="product-info" id="product000001">
-        
+            </div>  
             
-                <div class="info-product-img">
-                    <img src="../assets/img/products/pants.jpg"/>
+            <div class="product">
+                <div onclick="goToProductInfo('#product000004')" class="product-img">
+                    <img src="../assets/img/products/pants-2.jpg"/>
                 </div>
-                    <p>5-pocket jeans in washed, stretch denim with a regular waist, zip fly and button and gently tapered legs with good room for movement over the thighs and knees. The cotton content of the jeans is partly recycled.</p>
-
+                <div class="content">
+                    <h2>Jeans</h2>
                     <ul>
-                        <li>Size - <span>The model is 189cm/6'2" and wears a size 31/32</span></li>
-                        <li>Fit - <span>Regular fit</span></li>
-                        <li>Composition - <span>Cotton 98%, Elastane 2%</span></li>
-                        <li>Art. No. - <span>000001</span></li>
-                    </ul>
+                        <li class="product-artnr">Art.no: <span>000004</span></li>
+                        <li>category: Pants</li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>499.99</span>
+                    </button>
+                </div>
+            </div>    
 
-                    <div class="info-buttons">
-                    <button onclick="getProductInfo(this)"><span>499.99</span></button>
+            <div class="product">
+                <div onclick="goToProductInfo('#product000005')" class="product-img">
+                    <img src="../assets/img/products/hats-2.jpg"/>
+                </div>
+                <div class="content">
+                    <h2>hat</h2>
+                    <ul>
+                        <li class="product-artnr">Art.no: <span>000005</span></li>
+                        <li>category: Hats</li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>49.89</span>
+                    </button>
+                </div>
+            </div> 
 
-                    <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
-                    </div>
+            <div class="product">
+                <div onclick="goToProductInfo('#product000006')" class="product-img">
+                    <img src="../assets/img/products/shirt-2.jpg"/>
+                </div>
+                <div class="content">
+                    <h2>Shirt</h2>
+                    <ul>
+                        <li class="product-artnr">Art.no: <span>000006</span></li>
+                        <li>category: Shirts</li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>299.99</span>
+                    </button>
+                </div>
+            </div>           
 
-                
-            
+            <div class="product">
+                <div onclick="goToProductInfo('#product000007')" class="product-img">
+                    <img src="../assets/img/products/pants-3.jpg"/>
+                </div>
+                <div class="content">
+                    <h2>Jeans</h2>
+                    <ul>
+                        <li class="product-artnr">Art.no: <span>000007</span></li>
+                        <li>category: Pants</li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>499.99</span>
+                    </button>
+                </div>
+            </div>  
+
+            <div class="product">
+                <div onclick="goToProductInfo('#product000008')" class="product-img">
+                    <img src="../assets/img/products/hats-3.jpeg"/>
+                </div>
+                <div class="content">
+                    <h2>hat</h2>
+                    <ul>
+                        <li class="product-artnr">Art.no: <span>000008</span></li>
+                        <li>category: Hats</li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>49.89</span>
+                    </button>
+                </div>
+            </div> 
+
+            <div class="product">
+                <div onclick="goToProductInfo('#product000009')" class="product-img">
+                    <img src="../assets/img/products/shirt-3.jpg"/>
+                </div>
+                <div class="content">
+                    <h2>Shirt</h2>
+                    <ul>
+                        <li class="product-artnr">Art.no: <span>000009</span></li>
+                        <li>category: Shirts</li>
+                    </ul>   
+                    <button onclick="getProductInfo(this)">
+                    <span>299.99</span>
+                    </button>
+                </div>
+            </div>           
         </div>
-
+        <!-- Shopping page click product info -->
+        <div class="product-info" id="product000001">
+            <div class="info-product-img">
+                <img src="../assets/img/products/pants.jpg"/>
+            </div>
+                <p>5-pocket jeans in washed, stretch denim with a regular waist, zip fly and button and gently tapered legs with good room for movement over the thighs and knees. The cotton content of the jeans is partly recycled.</p>
+                <ul>
+                    <li>Size - <span>The model is 189cm/6'2" and wears a size 31/32</span></li>
+                    <li>Fit - <span>Regular fit</span></li>
+                    <li>Composition - <span>Cotton 98%, Elastane 2%</span></li>
+                    <li>Art. No. - <span>000001</span></li>
+                </ul>
+                <div class="content info-buttons">
+                    <h2>Jeans</h2>
+                    <button onclick="getProductInfo(this)"><span>499.99</span></button>
+                    <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+                </div>
+        </div>
         <div class="product-info" id="product000002">
-        
-            
             <div class="info-product-img">
                 <img src="../assets/img/products/hats.jpg"/>
             </div>
                 <p>Hat in felted fabric with a grosgrain band. Width of brim 6 cm.</p>
+                <ul>
+                    <li>Composition - <span>Polyester 100%</span></li>
+                    <li>Art. No. - <span>000002</span></li>
+                </ul>
+                <div class="info-buttons content">
+                    <h2>Hat</h2>
+                <button onclick="getProductInfo(this)"><span>49.89</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+                </div>
+        </div>
+        <div class="product-info" id="product000003">
+            <div class="info-product-img">
+                <img src="../assets/img/products/shirt.jpg"/>
+            </div>
+            <p>Shirt in airy end-on-end cotton with a button-down collar, classic front and open chest pocket. Long sleeves with adjustable buttoning at the cuffs, a yoke with a pleat and hanger at the back, and a rounded hem. Slightly longer at the back. Regular fit – a classic fit with good room for movement and a gently tapered waist to create a comfortable, tailored silhouette.</p>
+            <ul>
+                <li>Fit - <span>Regular fit</span></li>
+                <li>Composition - <span>Cotton 100%</span></li>
+                <li>Art. No. - <span>000003</span></li>
+            </ul>
+            <div class="info-buttons content">
+                <h2>Shirt</h2>
+                <button onclick="getProductInfo(this)"><span>299.99</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>
+        </div>
 
-    </main>
+        <div class="product-info" id="product000004">
+            <div class="info-product-img">
+                <img src="../assets/img/products/pants-2.jpg"/>
+            </div>
+            <p>5-pocket jeans in washed, stretch denim with a regular waist, zip fly and button and gently tapered legs with good room for movement over the thighs and knees. The cotton content of the jeans is partly recycled.</p>
+            <ul>
+                <li>Size - <span>The model is 189cm/6'2" and wears a size 31/32</span></li>
+                <li>Fit - <span>Regular fit</span></li>
+                <li>Composition - <span>Cotton 98%, Elastane 2%</span></li>
+                <li>Art. No. - <span>000004</span></li>
+            </ul>
+            <div class="content info-buttons">
+                <h2>Jeans</h2>
+                <button onclick="getProductInfo(this)"><span>499.99</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>
+        </div>
+
+        <div class="product-info" id="product000005">
+            <div class="info-product-img">
+                <img src="../assets/img/products/hats-2.jpg"/>
+            </div>
+            <p>Hat in felted fabric with a grosgrain band. Width of brim 6 cm.</p>
+            <ul>
+                <li>Composition - <span>Polyester 100%</span></li>
+                <li>Art. No. - <span>000005</span></li>
+            </ul>
+            <div class="info-buttons content">
+                <h2>Hat</h2>
+                <button onclick="getProductInfo(this)"><span>49.89</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>
+        </div>
+
+        <div class="product-info" id="product000006">
+            <div class="info-product-img">
+                <img src="../assets/img/products/shirt-2.jpg"/>
+            </div>
+            <p>Shirt in airy end-on-end cotton with a button-down collar, classic front and open chest pocket. Long sleeves with adjustable buttoning at the cuffs, a yoke with a pleat and hanger at the back, and a rounded hem. Slightly longer at the back. Regular fit – a classic fit with good room for movement and a gently tapered waist to create a comfortable, tailored silhouette.</p>
+            <ul>
+                <li>Fit - <span>Regular fit</span></li>
+                <li>Composition - <span>Cotton 100%</span></li>
+                <li>Art. No. - <span>000006</span></li>
+            </ul>
+            <div class="info-buttons content">
+                <h2>Shirt</h2>
+                <button onclick="getProductInfo(this)"><span>299.99</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>
+        </div>
     
+        <div class="product-info" id="product000007">
+            <div class="info-product-img">
+                <img src="../assets/img/products/pants-3.jpg"/>
+            </div>
+            <p>5-pocket jeans in washed, stretch denim with a regular waist, zip fly and button and gently tapered legs with good room for movement over the thighs and knees. The cotton content of the jeans is partly recycled.</p>
+            <ul>
+                <li>Size - <span>The model is 189cm/6'2" and wears a size 31/32</span></li>
+                <li>Fit - <span>Regular fit</span></li>
+                <li>Composition - <span>Cotton 98%, Elastane 2%</span></li>
+                <li>Art. No. - <span>000007</span></li>
+            </ul>
+            <div class="content info-buttons">
+                <h2>Jeans</h2>
+                <button onclick="getProductInfo(this)"><span>499.99</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>
+        </div>
+        
+        <div class="product-info" id="product000008">
+            <div class="info-product-img">
+                <img src="../assets/img/products/hats-3.jpeg"/>
+            </div>
+            <p>Hat in felted fabric with a grosgrain band. Width of brim 6 cm.</p>
+            <ul>
+                <li>Composition - <span>Polyester 100%</span></li>
+                <li>Art. No. - <span>000002</span></li>
+            </ul>
+            <div class="info-buttons content">
+                <h2>Hat</h2>
+                <button onclick="getProductInfo(this)"><span>49.89</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>  
+        </div>
+
+        <div class="product-info" id="product000009">
+            <div class="info-product-img">
+                <img src="../assets/img/products/shirt-3.jpg"/>
+            </div>
+            <p>Shirt in airy end-on-end cotton with a button-down collar, classic front and open chest pocket. Long sleeves with adjustable buttoning at the cuffs, a yoke with a pleat and hanger at the back, and a rounded hem. Slightly longer at the back. Regular fit – a classic fit with good room for movement and a gently tapered waist to create a comfortable, tailored silhouette.</p>
+            <ul>
+                <li>Fit - <span>Regular fit</span></li>
+                <li>Composition - <span>Cotton 100%</span></li>
+                <li>Art. No. - <span>000006</span></li>
+            </ul>
+            <div class="info-buttons content">
+                <h2>Shirt</h2>
+                <button onclick="getProductInfo(this)"><span>299.99</span></button>
+                <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+            </div>  
+        </div>
+    </article>
+    <!-- End of shopping page -->
+     
+    <!-- start of contact page -->
+    <article id="contact-page-nav" class="contact-page">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>While we´re good with smoke signals, there are simpler ways for us to get in touch and answer your questions.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contactInfo">
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="contact-text">
+                        <h3>Address</h3>
+                        <p>1337 webbutvecklargatan, <br>Malmö, Sverige, <br>12345</p>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="contact-text">
+                        <h3>Phone</h3>
+                        <p>123456789</p>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p>something@medieinstitutet.se</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+    <!-- End of contact page -->
+
+    <!-- About page -->
+    <article id="about">
+        <div class="about-section">
+            <div class="inner-container">
+                <h1><u>The Kerberos Group</u></h1>
+                <p class="about-text">The Kerberos Group is composed of multidisciplinary creative developers.
+                <br>
+                We work together to design, create and produce work that we are proud of for folks that we believe in. We are available for hire in a wide range of creative disciplines for a variety of jobs and projects.</p>
+                <p class="about-text-names"><u>Mattias Herzig</u> <u>Rick centerhall</u> <u>Shakir Salman</u> <u>Alan Arlukiewicz</u></p>
+                <hr>
+                
+                <div class="skills">
+                    <p><u>Web Design</u></p>
+                    <p><u>Coding</u></p>
+                    <p><u>HTML</u></p>
+                    <p><u>Javascript</u></p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- End of about page -->
+
+    <!-- Checkout -->
+    <article id="checkout">
+        <div class="checkout">
+            <div id="checkoutData">
+                <h1>CHECKOUT</h1>
+                <ul class="checkout-li">
+                </ul>
+                <button onclick="paymentAlert()">Payment</button>
+            </div>
+            <h3>DU KAN FÖLJA DIN BESTÄLLNING PÅ: <a href="https://www.postnord.se/en/our-tools/track-and-trace">Postnord</a> </h3>
+            <p>Synpunkter?<a href=""> Kontakta oss!</a></p>
+            <img src="../assets/img/extra/giphy.gif" alt="PAYMENT SUCCED!">
+            <img src="../assets/img/extra/DHL_Logo.svg.png" alt="">
+            <img src="../assets/img/extra/postnord-logo-2560x1080_1250x528_90.jpg" alt="">
+       </div>
+    </article>
+    <!-- End of Checkout -->
+    </main>
+    <!-- Start of footer -->
     <footer>
         <span class="footer-con">
             <div class="contact">
-            <h3>KERBEROS©</h3>
-            <h4>KONTAKT:</h4>
-            <p>mattias.herzig@medieinstitutet.se</p>
-            <p>rick.centerhall@medieinstitutet.se</p>
-            <p>shakir.salman@medieinstitutet.se</p>
-            <p>alan.arlukiewicz@medieinstitutet.se</p>
+                <h3>KERBEROS©</h3>
+                <h4>KONTAKT:</h4>
+                <p>mattias.herzig@medieinstitutet.se</p>
+                <p>rick.centerhall@medieinstitutet.se</p>
+                <p>shakir.salman@medieinstitutet.se</p>
+                <p>alan.arlukiewicz@medieinstitutet.se</p>
             </div>
-
 
             <div class="adress">
                 <h3>ADRESS</h3>
@@ -193,25 +493,30 @@
             </div>
 
             <div class="times">
-            <h3>OPEN HOURS</h3>
-            <p>MONDAY: 11:00 - 20:00</p>
-            <p>TUESDAY: 11:00 - 20:00</p>
-            <p>WEDNESDAY: 11:00 - 20:00</p>
-            <p>THURSDAY: 11:00 - 20:00</p>
-            <p>FRIDAY: 11:00 - 20:00</p>
-            <p>SATURDAY: 11:00 - 16:00</p>
-            <p>SUNDAY 11:00 - 16:00</p>
-        </div>
-        
+                <h3>OPEN HOURS</h3>
+                <p>MONDAY: 11:00 - 20:00</p>
+                <p>TUESDAY: 11:00 - 20:00</p>
+                <p>WEDNESDAY: 11:00 - 20:00</p>
+                <p>THURSDAY: 11:00 - 20:00</p>
+                <p>FRIDAY: 11:00 - 20:00</p>
+                <p>SATURDAY: 11:00 - 16:00</p>
+                <p>SUNDAY 11:00 - 16:00</p>
+            </div>
         </span>
+
         <div class="lowerfot">
             <i class="fab fa-facebook-square"></i>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-twitter-square"></i>
         </div>
     </footer>
+    <!-- End of footer -->
+
+    <!-- Script import -->
     <script src="../js/app-shoppingcart.js"></script>
     <script src="../js/app-nav.js"></script>
     <script src="../js/app-product-info.js"></script>
+    <script src="../js/app-search-function.js"></script>
+    <!-- End of script import -->
 </body>
 </html>

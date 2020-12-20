@@ -1,9 +1,20 @@
-function catogoriesSearch(){
+function catogoriesSearch(text) {
+  //console.log(text.textContent);
 
+  let search = text.textContent;
 
-    let clicking = document.querySelectorAll('.catogories a').textContent;
+  console.log(search);
 
-    for(let clicky of clicking){
-        console.log(clicky.textContent);
+  let products = document.querySelectorAll(".product");
+
+  for (let product of products) {
+    if (product.textContent.toLowerCase().includes(search.toLowerCase())) {
+      product.style.display = "block";
+    } else if (text.textContent.includes("All")) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
     }
+  }
+
 }
