@@ -5,6 +5,7 @@ addProductToShopForm.addEventListener("submit", function (e) {
   let name = queryOne(".add-product-to-shop .product-name").value;
   let category = queryOne(".add-product-to-shop .product-category").value;
   let price = queryOne(".add-product-to-shop .product-price").value;
+  //let image = queryOne(".add-product-to-shop .product-img").image;
 console.log(artno , name, category, price);
 addDiv(artno , name, category, price);
 });
@@ -18,24 +19,23 @@ function addDiv(artno , name, category, price) {
   let div = document.createElement('div');
   div.id = 'product';
 
-  let product = /*html*/ `<div class="content">
+  let product = /*html*/ `
+  <div class="content">
     <h2>${name}</h2>
-      <ul>
-        <li class="product-artnr">Art.no: <span>${artno}</span></li>
-        <li>category: ${category}</li>
-      </ul>   
-  <button onclick="getProductInfo(this)">
-  <span>${price}</span>
-  </button>
+    <ul>
+      <li class="product-artnr">Art.no: <span>${artno}</span></li>
+      <li>category: ${category}</li>
+    </ul>
+    <button onclick="getProductInfo(this)">
+    <span>${price}</span>
+    </button>
   </div>`;
 
 
  div.innerHTML = product;
-  div.className = 'product';
+ div.className = 'product';
 
-  //document.body.appendChild(div);
-let selectedDiv = document.querySelector(".products");
-
-alert(selectedDiv);
+  let cart = document.querySelector(".products");
+  cart.insertAdjacentHTML("beforeend", product);;
 }
 
