@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/style-shop-page.css">
     <link rel="stylesheet" href="../css/style-admin-page.css">
     <link rel="stylesheet" href="../css/checkout.css">
-    <link rel="stylesheet" href="../css/contact-style.css".css">
+    <link rel="stylesheet" href="../css/contact-style.css">
     <!-- Script import -->
     <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
@@ -377,7 +377,26 @@
         </div>
     </article>
     <!-- End of shopping page -->
-     
+
+    <!-- start of admin page -->
+    <article id="admin" class="admin-page">
+        <form class="add-product-to-shop">
+
+            <h3>Add product to shop</h3>
+    
+            <hr />
+            <input class="product-artno" type="number" placeholder="product artno" />
+            <input class="product-name" type="text" placeholder="product name" />
+            <input class="product-category" type="text" placeholder="product category" />
+            <input class="product-price" type="number" placeholder="price" />
+            
+            <!-- <input class="product-image" type="file" placeholder="product image"  accept=".jpg, .jpeg, .png"> -->
+
+            <button type="submit">Add product</button>
+        </form>
+    </article>
+    <!-- End of admin page -->
+
     <!-- start of contact page -->
     <article id="contact-page-nav" class="contact-page">
         <div class="contact-content">
@@ -514,5 +533,6 @@
     <script src="../js/app-shoppingcart.js"></script>
     <script src="../js/app-nav.js"></script>
     <script src="../js/app-product-info.js"></script>
+    <script src="../js/app-addproduct.js"></script>
 </body>
 </html>
