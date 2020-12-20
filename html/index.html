@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="../css/style-nav.css">
     <link rel="stylesheet" href="../css/about-section.css">
     <link rel="stylesheet" href="../css/style-shop-page.css">
+    <link rel="stylesheet" href="../css/style-admin-page.css">
     <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
 </head>
 <body>
     <header class="main-header">
+        <a class="shop" onclick="goto('#admin')">Admin-page</a>
         <!-- nav-bar -->
         <nav class="main-nav">
             <div class="container">
@@ -58,9 +60,8 @@
                 </div>
             </div>
         </article>
-
-    <article id="shop" class="shopping-page">
-        <div class="container">
+        <article id="shop" class="shopping-page">
+            <div class="container">
                 <nav class="categories">
                     <ol>
                         <li class="all"><a onclick="catogoriesSearch(this)">All</a></li>
@@ -69,7 +70,7 @@
                         <li class="rest"><a onclick="catogoriesSearch(this)">Hats</a></li>
                     </ol>
                 </nav>
-        <div class="products">   
+            <div class="products">   
             <div class="product">
                 <div onclick="goToProductInfo('#product000001')" class="product-img">
                     <img src="../assets/img/products/pants.jpg"/>
@@ -257,7 +258,23 @@
                 </div>
             </div>
         </div>
-    </article>
+        </article>
+        <article id="admin" class="admin-page">
+            <form class="add-product-to-shop">
+
+                <h3>Add product to shop</h3>
+          
+                <hr />
+                <input class="product-artno" type="number" placeholder="product artno" />
+                <input class="product-name" type="text" placeholder="product name" />
+                <input class="product-category" type="text" placeholder="product category" />
+                <input class="product-price" type="number" placeholder="price" />
+                
+                <!-- <input class="product-image" type="file" placeholder="product image"  accept=".jpg, .jpeg, .png"> -->
+
+                <button type="submit">Add product</button>
+            </form>
+        </article>
         
     <!-- About page -->
     <article id="about">
@@ -317,5 +334,6 @@
     <script src="../js/app-shoppingcart.js"></script>
     <script src="../js/app-nav.js"></script>
     <script src="../js/app-product-info.js"></script>
+    <script src="../js/app-addproduct.js"></script>
 </body>
 </html>
