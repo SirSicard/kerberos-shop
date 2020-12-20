@@ -1,43 +1,54 @@
-
 /* Kerberos group styling */
 .about-section {
-    min-height: 50vh;
-    display: flex;
-    margin: auto;
-    max-width: 90.1%;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
-    overflow: hidden;
-    background: url("https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  min-height: 50vh;
+  display: flex;
+  margin: auto;
+  max-width: 90.1%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  overflow: hidden;
+  background: url("https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: 2000px;
 }
 
 .inner-container {
-    width: 55%;
-    background: #585856;
-    padding: 90px;
+  width: 55%;
+  background: #585856;
+  padding: 65px;
+  border: solid gray;
 }
 
 .inner-container h1 {
-    margin-bottom: 30px;
-    font-size: 35px;
-    font-weight: 900;
-    color: white;
+  margin-bottom: 30px;
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
 }
 
 .about-text {
-    font-size: 13px;
-    color: white;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
+  font-size: 13px;
+  color: white;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.about-text-names {
+  display: flex;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  width: 55%;
 }
 
 .skills {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 650;
-    width: 70%;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 650;
+  width: 75%;
+  color: white;
+  
 }
 /* End of Kerberos group styling */
