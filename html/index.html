@@ -380,7 +380,7 @@
 
     <!-- start of admin page -->
     <article id="admin" class="admin-page">
-        <form class="add-product-to-shop">
+        <form class="add-product-to-shop" enctype="multipart/form-data" action="/assets/img/products" method="post">
 
             <h3>Add product to shop</h3>
     
@@ -389,9 +389,7 @@
             <input class="product-name" type="text" placeholder="product name" />
             <input class="product-category" type="text" placeholder="product category" />
             <input class="product-price" type="number" placeholder="price" />
-            
-            <!-- <input class="product-image" type="file" placeholder="product image"  accept=".jpg, .jpeg, .png"> -->
-
+            <input class="product-image" id="product-image" type='file' accept=".jpg, .jpeg, .png" />
             <button type="submit">Add product</button>
         </form>
     </article>
