@@ -65,7 +65,20 @@ body {
   top: 50%;
   transform: translateY(-50%);
   right: 300px;
-  /* margin-right: 200px; */
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 3px;
+  font-weight: bolder;
+}
+
+.main-nav .admin-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 505px;
   text-decoration: none;
   color: #333;
   font-size: 14px;
