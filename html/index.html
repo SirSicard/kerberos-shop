@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="../css/style-nav.css">
     <link rel="stylesheet" href="../css/about-section.css">
     <link rel="stylesheet" href="../css/style-shop-page.css">
+    <link rel="stylesheet" href="../css/style-admin-page.css">
     <link rel="stylesheet" href="../css/checkout.css">
-    <link rel="stylesheet" href="../css/contact-style.css".css">
+    <link rel="stylesheet" href="../css/contact-style.css">
     <!-- Script import -->
     <script src="../js/app-page.js"></script>
     <script src="../js/app-catogories.js"></script>
@@ -29,6 +30,7 @@
                 <a class="about" onclick="goto('#about')">About</a>
                 <a class="shop" onclick="goto('#shop')">Shop</a>
                 <a class="contact-page-nav" onclick="goto('#contact-page-nav')">Contact</a>
+                <a class="admin-nav" onclick="goto('#admin')">Admin-page</a>
                 <i class="fas fa-search" onclick="slideSearch(this)"></i>
                 <i class="fas fa-shopping-cart" onclick="slideShoppingCart(this)"></i>
             </div>
@@ -66,11 +68,9 @@
                 </div>
             </div>
         </article>
-        <!-- End of hero landing -->
-    
-        <!-- Shopping page -->
-        <article id="shop" class="shopping-page">
-            <div class="container">
+
+    <article id="shop" class="shopping-page">
+        <div class="container">
                 <nav class="categories">
                     <ol>
                         <li class="all"><a onclick="catogoriesSearch(this)">All</a></li>
@@ -79,7 +79,6 @@
                         <li class="rest"><a onclick="catogoriesSearch(this)">Hats</a></li>
                     </ol>
                 </nav>
-
         <div class="products">   
             <div class="product">
                 <div onclick="goToProductInfo('#product000001')" class="product-img">
@@ -378,7 +377,27 @@
         </div>
     </article>
     <!-- End of shopping page -->
-     
+
+    <!-- start of admin page -->
+    <article id="admin" class="admin-page">
+        <form class="add-product-to-shop">
+
+            <h3>Add product to shop</h3>
+    
+            <hr />
+            <input class="product-artno" type="number" placeholder="product artno" />
+            <input class="product-name" type="text" placeholder="product name" />
+            <input class="product-category" type="text" placeholder="product category" />
+            <input class="product-price" type="number" placeholder="price" />
+            <input class="product-desc" type="text" placeholder="product description" /> 
+            <input class="product-size" type="text" placeholder="product size" />
+            <br>
+            <input class="product-image" id="product-image" type='file' accept=".jpg, .jpeg, .png" />
+            <button type="submit">Add product</button>
+        </form>
+    </article>
+    <!-- End of admin page -->
+
     <!-- start of contact page -->
     <article id="contact-page-nav" class="contact-page">
         <div class="contact-content">
@@ -431,8 +450,7 @@
             </div>
         </div>
     </article>
-    <!-- End of contact page -->
-
+        
     <!-- About page -->
     <article id="about">
         <div class="about-section">
@@ -516,7 +534,6 @@
     <script src="../js/app-shoppingcart.js"></script>
     <script src="../js/app-nav.js"></script>
     <script src="../js/app-product-info.js"></script>
-    <script src="../js/app-search-function.js"></script>
-    <!-- End of script import -->
+    <script src="../js/app-addproduct.js"></script>
 </body>
 </html>
