@@ -9,8 +9,12 @@ addProductToShopForm.addEventListener("submit", function (e) {
   let category = queryOne(".add-product-to-shop .product-category").value;
   let price = queryOne(".add-product-to-shop .product-price").value;
   let image = document.getElementById("product-image").files[0].name;
+  let info = queryOne(".add-product-to-shop .product-desc").value;
+  let size = queryOne(".add-product-to-shop .product-size").value;
 //console.log(artno , name, category, price, image);
-addDiv(artno , name, category, price , image);
+addDiv(artno , name, category, price , image, info , size);
+addDivInfo(artno , name , price , image, info , size);
+
 });
 
 // short expression for select query
@@ -40,10 +44,42 @@ function addDiv(artno , name, category, price , image) {
   </div>`;
 
 
+
  div.innerHTML = product;
  div.className = 'product';
 
-  let cart = document.querySelector(".products");
-  cart.insertAdjacentHTML("beforeend", product);;
+  let selectedDiv = document.querySelector(".products");
+  selectedDiv.insertAdjacentHTML("beforeend", product);;
+}
+
+// this function for create and push a new Div for new product in shop
+function addDivInfo(artno , name, price , image , info , size) {
+    
+  let div = document.createElement('div');
+  div.className = "product-info";
+
+
+  let productInfo = /*html*/ `<div class="product-info" id="product${artno}">
+  <div class="info-product-img">
+      <img src="../assets/img/products/${image}"/>
+  </div>
+  <p> ${info}</p>
+  <ul>
+      <li>Size - <span>${size}</span></li>
+      <li>Composition - <span>Cotton 100%</span></li>
+      <li>Art. No. - <span>${artno}</span></li>
+  </ul>
+  <div class="info-buttons content">
+      <h2>${name}</h2>
+      <button onclick="getProductInfo(this)"><span>${price}</span></button>
+      <i onclick="goBack()" class="fas fa-chevron-circle-left"></i>
+  </div>
+</div>`;
+
+ div.innerHTML = productInfo;
+ div.className = 'product-info';
+
+  let selectedDiv = document.querySelector(".products");
+  selectedDiv.insertAdjacentHTML("beforeend", productInfo);;
 }
 
