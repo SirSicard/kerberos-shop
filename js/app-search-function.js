@@ -3,10 +3,10 @@ function searching() {
   let keyword = new RegExp(document.getElementById("keyword").value, "gi");
   let searchResult = productList.filter((o) => o.product.match(keyword));
   document.getElementById("product").innerHTML = `${searchResult.map(productListInfo).join("")}`;
-  console.log
-  
 }
-/* Output function */
+
+
+ /*Output function  */
 function productListInfo() {
   return `
         <div class="product">
@@ -26,6 +26,7 @@ function productListInfo() {
         </div>
         `;
 }
+
 /* Product list */
 let productList = [
   {
